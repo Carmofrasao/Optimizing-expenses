@@ -1,0 +1,4 @@
+min: usina_termoeletrica + usina_hidroeletrica; 
+usina_termoeletrica >= 1;
+usina_hidroeletrica >= 1;
+usina_termoeletrica + usina_hidroeletrica >= 2;
