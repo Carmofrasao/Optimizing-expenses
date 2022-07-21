@@ -28,17 +28,12 @@ int main(void){
     scanf("%f", &CA);                                   
 
     // fazer o for do min
-    printf("min : ", );
+    printf("min : ");
 
-    printf("x_1 > 0;");
-    printf("x_2 - x_3 > 0;");
-    printf("x_4 >= 0;");
-    printf("x_5 >= 0;");
-    printf("x_6 >= 0;");
-    printf("x_7 >= 0;");
-    printf("x_8 >= 0;");
-    printf("x_9 >= 0;");
-    printf("x_10 >= 0;");
+    printf("%f * (", CT * k);
+    for (int i = 0; i < n; i++) {
+        printf("%f +", );
+    }
 
     return 1;
 }
