@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// cat teste.txt | ./lp_solve_5.5.2.11_exe_ux64/lp_solve
+// ./despacho < teste1.txt | ./lp_solve_5.5.2.11_exe_ux64/lp_solve
 // exemplo de entrada
 
 int main(void){
