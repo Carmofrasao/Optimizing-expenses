@@ -77,7 +77,6 @@ int main(void){
     for (int i = 1; i <= n; i++){
         printf("v_%d <= v_max;\n", i);
     }
-    // trecho duvidoso
     for (int i = 1; i <= n; i++){
         printf("Ci_%d - Cd_%d = y_%d - TURBINADO_%d;\n", i, i, i, i);
     }
