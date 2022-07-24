@@ -35,9 +35,9 @@ int main(void){
     }
     for (int i = 1; i <= n; i++) {
         if(i != n)
-            printf("%f GERACAO_TERMO_%d + ",CT, i);
+            printf("%f TERMO_%d + ",CT, i);
         else
-            printf("%f GERACAO_TERMO_%d;\n", CT, i);
+            printf("%f TERMO_%d;\n", CT, i);
     }
     printf("/*sujeito a:*/\n");
     printf("/*Constantes:*/\n");
@@ -56,16 +56,16 @@ int main(void){
     printf("t_max = %d;\n", t_max);
     printf("/*Inequações:*/\n");
     for(int i = 1; i <= n; i++){
-        printf("%f TURBINADO_%d + GERACAO_TERMO_%d >= d_%d;\n", k, i, i, i);
+        printf("%f TURBINADO_%d + TERMO_%d >= d_%d;\n", k, i, i, i);
     }
     for (int i = 1; i <= n; i++){
         printf("TURBINADO_%d >= 0;\n", i);
     }
     for (int i = 1; i <= n; i++){
-        printf("GERACAO_TERMO_%d >= 0;\n", i);
+        printf("TERMO_%d >= 0;\n", i);
     }
     for (int i = 1; i <= n; i++){
-        printf("GERACAO_TERMO_%d <= t_max;\n", i);
+        printf("TERMO_%d <= t_max;\n", i);
     }
     printf("v_0 = v_ini;\n");
     for (int i = 1; i <= n; i++){

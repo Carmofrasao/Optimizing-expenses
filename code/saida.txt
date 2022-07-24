@@ -1,5 +1,5 @@
 /*função objetivo:*/
-min : 0.005000 Acr_1 + 0.005000 Decr_1 + 0.005000 Acr_2 + 0.005000 Decr_2 + 0.005000 Acr_3 + 0.005000 Decr_3 + 0.200000 GERACAO_TERMO_1 + 0.200000 GERACAO_TERMO_2 + 0.200000 GERACAO_TERMO_3;
+min : 0.005000 Acr_1 + 0.005000 Decr_1 + 0.005000 Acr_2 + 0.005000 Decr_2 + 0.005000 Acr_3 + 0.005000 Decr_3 + 0.200000 TERMO_1 + 0.200000 TERMO_2 + 0.200000 TERMO_3;
 /*sujeito a:*/
 /*Constantes:*/
 CT = 0.200000;
@@ -16,18 +16,18 @@ y_2 = 800;
 y_3 = 200;
 t_max = 1000;
 /*Inequações:*/
-1.100000 TURBINADO_1 + GERACAO_TERMO_1 >= d_1;
-1.100000 TURBINADO_2 + GERACAO_TERMO_2 >= d_2;
-1.100000 TURBINADO_3 + GERACAO_TERMO_3 >= d_3;
+1.100000 TURBINADO_1 + TERMO_1 >= d_1;
+1.100000 TURBINADO_2 + TERMO_2 >= d_2;
+1.100000 TURBINADO_3 + TERMO_3 >= d_3;
 TURBINADO_1 >= 0;
 TURBINADO_2 >= 0;
 TURBINADO_3 >= 0;
-GERACAO_TERMO_1 >= 0;
-GERACAO_TERMO_2 >= 0;
-GERACAO_TERMO_3 >= 0;
-GERACAO_TERMO_1 <= t_max;
-GERACAO_TERMO_2 <= t_max;
-GERACAO_TERMO_3 <= t_max;
+TERMO_1 >= 0;
+TERMO_2 >= 0;
+TERMO_3 >= 0;
+TERMO_1 <= t_max;
+TERMO_2 <= t_max;
+TERMO_3 <= t_max;
 v_0 = v_ini;
 v_1 = v_0 + Acr_1 - Decr_1;
 v_2 = v_1 + Acr_2 - Decr_2;
