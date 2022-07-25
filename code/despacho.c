@@ -1,3 +1,6 @@
+// Anderson Aparecido do Carmo Frasão GRR20194069
+// Richard Fernando Heise Ferreira GRR20191053
+
 #include <stdio.h>
 
 // ./despacho < teste1.txt | ./lp_solve_5.5.2.11_exe_ux64/lp_solve
