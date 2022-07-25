@@ -1,0 +1,49 @@
+/*função objetivo:*/
+min : 0.005000 Acr_1 + 0.005000 Decr_1 + 0.005000 Acr_2 + 0.005000 Decr_2 + 0.005000 Acr_3 + 0.005000 Decr_3 + 0.200000 TERMO_1 + 0.200000 TERMO_2 + 0.200000 TERMO_3;
+/*sujeito a:*/
+/*Constantes:*/
+CT = 0.200000;
+CA = 0.005000;
+v_max = 1000;
+v_min = 200;
+v_ini = 500;
+d_1 = 900;
+d_2 = 1000;
+d_3 = 950;
+k = 1.100000;
+y_1 = 500;
+y_2 = 800;
+y_3 = 200;
+t_max = 1000;
+/*Inequações:*/
+1.100000 TURBINADO_1 + TERMO_1 >= d_1;
+1.100000 TURBINADO_2 + TERMO_2 >= d_2;
+1.100000 TURBINADO_3 + TERMO_3 >= d_3;
+TURBINADO_1 >= 0;
+TURBINADO_2 >= 0;
+TURBINADO_3 >= 0;
+TERMO_1 >= 0;
+TERMO_2 >= 0;
+TERMO_3 >= 0;
+TERMO_1 <= t_max;
+TERMO_2 <= t_max;
+TERMO_3 <= t_max;
+v_0 = v_ini;
+v_1 = v_0 + Acr_1 - Decr_1;
+v_2 = v_1 + Acr_2 - Decr_2;
+v_3 = v_2 + Acr_3 - Decr_3;
+v_1 >= v_min;
+v_2 >= v_min;
+v_3 >= v_min;
+v_1 <= v_max;
+v_2 <= v_max;
+v_3 <= v_max;
+Acr_1 - Decr_1 = y_1 - TURBINADO_1;
+Acr_2 - Decr_2 = y_2 - TURBINADO_2;
+Acr_3 - Decr_3 = y_3 - TURBINADO_3;
+Acr_1 >= 0;
+Acr_2 >= 0;
+Acr_3 >= 0;
+Decr_1 >= 0;
+Decr_2 >= 0;
+Decr_3 >= 0;

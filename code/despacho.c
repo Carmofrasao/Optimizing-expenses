@@ -5,13 +5,13 @@
 
 int main(void){
 
-    // Variáveis
+    // Acriáveis
     int n;  // Quantidade de meses                     
     scanf("%d", &n);                                    
     int d[n];  // Demanda mensal                                         
-    int y[n];  // Afluência mensal
+    int y[n];  // AfluênAcra mensal
     int v_ini, v_min, v_max; // v de volume
-    int t_max;  // É a capacidade máxima de geração da termo  
+    int t_max;  // É a capaAcrdade máxima de geração da termo  
     float k; // É a constante de geração da hidroelétrica a cada 1m³ 
     float CT;  // Custo de geração da termoelétrica  
     float CA;  // Custo ambiental
@@ -31,13 +31,13 @@ int main(void){
     printf("min : ");
 
     for (int i = 1; i <= n; i++) {
-        printf("%f Ci_%d + %f Cd_%d + ", CA, i, CA, i);
+        printf("%f Acr_%d + %f Decr_%d + ", CA, i, CA, i);
     }
     for (int i = 1; i <= n; i++) {
         if(i != n)
-            printf("%f GERACAO_TERMO_%d + ",CT, i);
+            printf("%f TERMO_%d + ",CT, i);
         else
-            printf("%f GERACAO_TERMO_%d;\n", CT, i);
+            printf("%f TERMO_%d;\n", CT, i);
     }
     printf("/*sujeito a:*/\n");
     printf("/*Constantes:*/\n");
@@ -56,20 +56,20 @@ int main(void){
     printf("t_max = %d;\n", t_max);
     printf("/*Inequações:*/\n");
     for(int i = 1; i <= n; i++){
-        printf("%f TURBINADO_%d + GERACAO_TERMO_%d >= d_%d;\n", k, i, i, i);
+        printf("%f TURBINADO_%d + TERMO_%d >= d_%d;\n", k, i, i, i);
     }
     for (int i = 1; i <= n; i++){
         printf("TURBINADO_%d >= 0;\n", i);
     }
     for (int i = 1; i <= n; i++){
-        printf("GERACAO_TERMO_%d >= 0;\n", i);
+        printf("TERMO_%d >= 0;\n", i);
     }
     for (int i = 1; i <= n; i++){
-        printf("GERACAO_TERMO_%d <= t_max;\n", i);
+        printf("TERMO_%d <= t_max;\n", i);
     }
     printf("v_0 = v_ini;\n");
     for (int i = 1; i <= n; i++){
-        printf("v_%d = v_%d + Ci_%d - Cd_%d;\n", i, i-1, i, i);
+        printf("v_%d = v_%d + Acr_%d - Decr_%d;\n", i, i-1, i, i);
     }
     for (int i = 1; i <= n; i++){
         printf("v_%d >= v_min;\n", i);
@@ -78,13 +78,13 @@ int main(void){
         printf("v_%d <= v_max;\n", i);
     }
     for (int i = 1; i <= n; i++){
-        printf("Ci_%d - Cd_%d = y_%d - TURBINADO_%d;\n", i, i, i, i);
+        printf("Acr_%d - Decr_%d = y_%d - TURBINADO_%d;\n", i, i, i, i);
     }
     for (int i = 1; i <= n; i++){
-        printf("Ci_%d >= 0;\n", i);
+        printf("Acr_%d >= 0;\n", i);
     }
     for (int i = 1; i <= n; i++){
-        printf("Cd_%d >= 0;\n", i);
+        printf("Decr_%d >= 0;\n", i);
     }
     
     return 1;
