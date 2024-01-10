@@ -1,25 +1,21 @@
-# Otimizando o gasto de uma empresa de energia
+# Optimizing the costs of an energy company
 
-Trabalho 1 da matéria de Otimização, do curso de Ciencia da Computação, da Universidade Federal do Paraná.
+Work for the Optimization subject in the Computer Science course at the Federal University of Paraná.
 
-Feito por Anderson Frasão e Richard Heise
+Done by Anderson Frasão and Richard Heise
 
-Objetivo
+Objective
 
-Modelar um problema de Otimização
+To model an optimization problem
 
-Implementação
+Implementation
 
-  A implementação trata-se de um código em C que simplesmente lê as entradas do teclado
-e gera um arquivo de saı́da pronto para ser passado para o lp solve. Devido às restrições do
-lp solve, o código expande os somatórios e os escreve por extenso, junto com as demais
-equações e inequações, em stdout. A leitura é realizada de acordo com a quantida de
-meses n e demais informações lidas a partir de stdin.
+  The implementation is a C code that simply reads the inputs from the keyboard and generates an output file ready to be passed to lp solve. Due to the restrictions of lp solve, the code expands the sums and writes them in full, along with the other equations and inequalities, in stdout. Reading is done according to the number of months n and other information read from stdin.
 
-Execução
+Execution
 
-Compile com
+Compile with
 > make
 
-Rode com
+Run with
 > ./despacho < exemplo.txt | ./lp_solve_5.5.2.11_exe_ux64/lp_solve
